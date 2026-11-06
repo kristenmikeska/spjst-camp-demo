@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>SPJST Summer Camp 2027 — Draft</title>
+<style>body{margin:0;background:#fff}</style>
+</head>
+<body>
+<div style="background:#FFF6D6;border-bottom:1px solid #E8D58A;color:#4A3B00;font:600 14px/1.4 system-ui,sans-serif;text-align:center;padding:10px 16px">Draft preview for review &mdash; not the live SPJST website. <span style="display:inline-block;margin-left:14px">Page 1 of 2: <strong>Summer Camp</strong> &middot; <a href="camp-raffle/" style="color:#24367C">View the Camp Raffle page</a></span></div>
+<!-- ============================================================
+     SPJST SUMMER YOUTH CAMP 2027 — paste into a WordPress Custom HTML block
+     Page: spjst.org/camp/
+     Quick edits:
+       • Registration link ........ search "REGISTER_URL"
+       • Raffle page link .......... search "/camp-raffle/"
+       • Recap video (SmugMug) ..... search "VIDEO EMBED"
+     ============================================================ -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Nunito+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+
+<style>
+#camp-page{
+  --navy:#24367C; --blue:#0757A0; --sky:#E8F1FA; --teal:#17999A; --teal-dk:#0F7C7D;
+  --sun:#FFC72C; --ink:#1B2240; --muted:#55607E; --line:#D5DFEC; --white:#fff;
+  font-family:'Nunito Sans',system-ui,sans-serif; color:var(--ink); font-size:17px; line-height:1.6;
+  max-width:1100px; margin:0 auto; -webkit-font-smoothing:antialiased;
+}
+#camp-page *,#camp-page *::before,#camp-page *::after{box-sizing:border-box}
+#camp-page h1,#camp-page h2,#camp-page h3{font-family:'Oswald',sans-serif; color:var(--navy); line-height:1.15; margin:0 0 .5em; letter-spacing:.01em; text-transform:none; border:0; padding:0}
+#camp-page h2{font-size:clamp(28px,4vw,38px); text-transform:uppercase}
+#camp-page h3{font-size:21px}
+#camp-page p{margin:0 0 1em}
+#camp-page a{color:var(--blue)}
+#camp-page section{padding:56px 24px}
+#camp-page .wrap{max-width:960px; margin:0 auto}
+#camp-page .eyebrow{display:inline-block; font-family:'Oswald',sans-serif; font-weight:600; font-size:14px; letter-spacing:.14em; text-transform:uppercase; color:var(--teal-dk); margin-bottom:8px}
+#camp-page .center{text-align:center}
+#camp-page .lede{font-size:19px; color:var(--muted); max-width:720px; margin:0 auto 1.4em}
+
+/* buttons */
+#camp-page .btn{display:inline-flex; align-items:center; gap:10px; font-family:'Oswald',sans-serif; font-weight:600; font-size:19px; letter-spacing:.06em; text-transform:uppercase; text-decoration:none; padding:15px 30px; border-radius:999px; transition:transform .15s, box-shadow .15s, background .15s; border:2px solid transparent; line-height:1.2}
+#camp-page .btn:hover{transform:translateY(-2px)}
+#camp-page .btn-sun{background:var(--sun); color:var(--navy); box-shadow:0 6px 0 #D9A200}
+#camp-page .btn-sun:hover{box-shadow:0 8px 0 #D9A200; color:var(--navy)}
+#camp-page .btn-ghost{background:transparent; color:#fff; border-color:rgba(255,255,255,.7)}
+#camp-page .btn-ghost:hover{background:rgba(255,255,255,.12); color:#fff}
+#camp-page .btn-teal{background:var(--teal); color:#fff}
+#camp-page .btn-teal:hover{background:var(--teal-dk); color:#fff}
+#camp-page .btn svg{width:20px; height:20px; flex:none}
+
+/* hero */
+#camp-page .hero{position:relative; overflow:hidden; text-align:center; color:#fff; padding:56px 24px 0; border-radius:0 0 28px 28px;
+  background:
+    repeating-conic-gradient(from 270deg at 50% 100%, rgba(255,255,255,.07) 0deg 6deg, transparent 6deg 12deg),
+    radial-gradient(ellipse at 50% 100%, #1167B8 0%, var(--blue) 35%, var(--navy) 80%)}
+#camp-page .hero-logo{width:min(260px,62vw); height:auto; display:block; margin:0 auto 18px; filter:drop-shadow(0 10px 24px rgba(0,0,0,.3))}
+#camp-page .hero h1{color:#fff; font-size:clamp(34px,6vw,60px); text-transform:uppercase; margin-bottom:6px}
+#camp-page .hero h1 span{display:block; font-size:.45em; letter-spacing:.2em; color:var(--sun); font-weight:600}
+#camp-page .hero .tag{font-size:19px; opacity:.92; max-width:600px; margin:0 auto 26px}
+#camp-page .hero-ctas{display:flex; flex-wrap:wrap; justify-content:center; gap:14px; margin-bottom:44px}
+#camp-page .rails{height:26px; margin:0 -24px; background:
+   repeating-linear-gradient(90deg, #6E4A2B 0 10px, transparent 10px 34px) 0 9px/100% 9px no-repeat,
+   linear-gradient(#B7C3D6,#B7C3D6) 0 4px/100% 4px no-repeat,
+   linear-gradient(#B7C3D6,#B7C3D6) 0 19px/100% 4px no-repeat}
+
+/* ticket facts */
+#camp-page .facts{display:grid; grid-template-columns:repeat(4,1fr); gap:0; margin:-8px auto 0; max-width:1000px; background:#fff; border-radius:18px; box-shadow:0 12px 34px rgba(36,54,124,.16); position:relative; z-index:2; overflow:hidden}
+#camp-page .fact{padding:22px 20px; border-right:2px dashed var(--line)}
+#camp-page .fact:last-child{border-right:0}
+#camp-page .fact .k{font-family:'Oswald',sans-serif; font-size:13px; letter-spacing:.16em; text-transform:uppercase; color:var(--teal-dk); font-weight:600}
+#camp-page .fact .v{font-family:'Oswald',sans-serif; font-size:22px; color:var(--navy); font-weight:600; line-height:1.2; margin:4px 0 2px}
+#camp-page .fact .s{font-size:14px; color:var(--muted); line-height:1.4}
+#camp-page .facts-wrap{padding:0 24px}
+#camp-page .rf-banner{max-width:1000px; margin:18px auto 0; padding:0 24px}
+#camp-page .rf-banner a{display:flex; align-items:center; gap:14px; background:var(--sun); color:var(--navy); text-decoration:none; border-radius:14px; padding:14px 20px; font-size:16px; line-height:1.4; transition:transform .15s}
+#camp-page .rf-banner a:hover{transform:translateY(-2px)}
+#camp-page .rf-banner svg{flex:none; width:40px; height:40px}
+#camp-page .rf-banner .txt{flex:1}
+#camp-page .rf-banner strong{font-family:'Oswald',sans-serif; font-weight:600; font-size:19px; letter-spacing:.02em; display:block}
+#camp-page .rf-banner .go{flex:none; font-family:'Oswald',sans-serif; font-weight:600; letter-spacing:.08em; text-transform:uppercase; background:var(--navy); color:#fff; border-radius:999px; padding:8px 18px; font-size:15px}
+
+/* activities */
+#camp-page .acts{display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin-top:28px}
+#camp-page .act{background:var(--sky); border-radius:16px; padding:22px 18px; text-align:center}
+#camp-page .act .ic{width:58px; height:58px; border-radius:50%; background:#fff; display:grid; place-items:center; margin:0 auto 12px; color:var(--blue)}
+#camp-page .act .ic svg{width:30px; height:30px}
+#camp-page .act h3{font-size:19px; margin-bottom:4px}
+#camp-page .act p{font-size:15px; color:var(--muted); margin:0; line-height:1.45}
+#camp-page .note{font-size:14px; color:var(--muted); font-style:italic; margin-top:16px}
+#camp-page .venue{display:flex; gap:20px; align-items:center; background:#fff; border:2px solid var(--line); border-radius:16px; padding:20px 24px; margin-top:28px}
+#camp-page .venue .pin{flex:none; width:48px; height:48px; border-radius:12px; background:var(--teal); color:#fff; display:grid; place-items:center}
+#camp-page .venue .pin svg{width:26px; height:26px}
+#camp-page .venue p{margin:0; font-size:16px}
+
+/* steps */
+#camp-page .bg-sky{background:var(--sky); border-radius:28px}
+#camp-page .steps{display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin:28px 0 30px; counter-reset:step; padding:0; list-style:none}
+#camp-page .steps li{background:#fff; border-radius:16px; padding:24px 20px 20px; position:relative}
+#camp-page .steps li::before{counter-increment:step; content:counter(step); position:absolute; top:-16px; left:20px; width:36px; height:36px; border-radius:50%; background:var(--navy); color:var(--sun); font-family:'Oswald',sans-serif; font-weight:700; font-size:19px; display:grid; place-items:center}
+#camp-page .steps h3{margin:6px 0 4px; font-size:19px}
+#camp-page .steps p{margin:0; font-size:15px; color:var(--muted)}
+
+/* fees */
+#camp-page .fees{display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:28px}
+#camp-page .fee{border:2px solid var(--line); border-radius:18px; padding:24px 22px; background:#fff; display:flex; flex-direction:column}
+#camp-page .fee.best{border-color:var(--teal); box-shadow:0 10px 26px rgba(23,153,154,.18); position:relative}
+#camp-page .fee.best .flag{position:absolute; top:-13px; right:18px; background:var(--teal); color:#fff; font-family:'Oswald',sans-serif; font-size:13px; letter-spacing:.12em; text-transform:uppercase; padding:4px 12px; border-radius:999px}
+#camp-page .fee .who{font-family:'Oswald',sans-serif; font-size:19px; color:var(--navy); font-weight:600}
+#camp-page .fee .price{font-family:'Oswald',sans-serif; font-size:44px; font-weight:700; color:var(--blue); line-height:1; margin:10px 0 4px}
+#camp-page .fee .price small{font-size:16px; font-weight:500; color:var(--muted); letter-spacing:.04em}
+#camp-page .fee .desc{font-size:14px; color:var(--muted); margin-bottom:14px}
+#camp-page .fee dl{margin:auto 0 0; border-top:2px dashed var(--line); padding-top:12px; font-size:15px}
+#camp-page .fee dl div{display:flex; justify-content:space-between; gap:10px; padding:3px 0}
+#camp-page .fee dt{color:var(--muted)} #camp-page .fee dd{margin:0; font-weight:700}
+
+#camp-page .save{display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-top:22px}
+#camp-page .save-card{border-radius:18px; padding:22px 24px; background:var(--navy); color:#fff}
+#camp-page .save-card.alt{background:var(--teal-dk)}
+#camp-page .save-card h3{color:var(--sun); margin-bottom:6px}
+#camp-page .save-card p{font-size:15px; margin:0 0 .6em; opacity:.95}
+#camp-page .save-card a{color:#fff; font-weight:700}
+
+#camp-page .fine{display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:22px}
+#camp-page .fine div{font-size:15px; background:var(--sky); border-radius:14px; padding:16px 18px}
+#camp-page .fine strong{display:block; font-family:'Oswald',sans-serif; font-weight:600; color:var(--navy); font-size:17px; margin-bottom:2px; letter-spacing:.02em}
+
+/* requirements */
+#camp-page .req{border-left:6px solid var(--sun); background:#FFF8E1; border-radius:0 16px 16px 0; padding:22px 26px}
+#camp-page .req p:last-child{margin:0}
+
+/* raffle teaser */
+#camp-page .raffle{display:grid; grid-template-columns:auto 1fr auto; gap:26px; align-items:center; background:var(--sun); border-radius:22px; padding:28px 32px; position:relative; overflow:hidden}
+#camp-page .raffle .tix{width:92px; height:92px; color:var(--navy)}
+#camp-page .raffle h2{font-size:clamp(24px,3.4vw,32px); margin-bottom:4px}
+#camp-page .raffle p{margin:0; font-size:16px}
+#camp-page .raffle .btn{background:var(--navy); color:#fff}
+#camp-page .raffle .btn:hover{background:var(--blue); color:#fff}
+
+/* video */
+#camp-page .video{position:relative; aspect-ratio:16/9; border-radius:20px; overflow:hidden; background:var(--navy); box-shadow:0 14px 34px rgba(36,54,124,.2); margin-top:24px}
+#camp-page .video iframe{position:absolute; inset:0; width:100%; height:100%; border:0}
+#camp-page .vid-stage{position:relative}
+#camp-page .slide{position:absolute; inset:0; display:none}
+#camp-page .slide.on{display:block}
+#camp-page .vid-arrow{position:absolute; top:50%; z-index:3; width:52px; height:52px; margin-top:-14px; border-radius:50%; border:0; cursor:pointer; background:var(--sun); color:var(--navy); display:grid; place-items:center; box-shadow:0 6px 16px rgba(36,54,124,.3); transition:transform .15s; padding:0}
+#camp-page .vid-arrow:hover{transform:scale(1.08)}
+#camp-page .vid-arrow svg{width:24px; height:24px}
+#camp-page .vid-arrow.prev{left:-26px} #camp-page .vid-arrow.next{right:-26px}
+#camp-page .vid-tabs{display:flex; justify-content:center; gap:10px; margin-top:18px}
+#camp-page .vid-tabs button{font-family:'Oswald',sans-serif; font-weight:600; font-size:16px; letter-spacing:.08em; padding:8px 20px; border-radius:999px; border:2px solid var(--navy); background:transparent; color:var(--navy); cursor:pointer}
+#camp-page .vid-tabs button[aria-selected="true"]{background:var(--navy); color:#fff}
+
+/* contact */
+#camp-page .contacts{display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-top:24px}
+#camp-page .contact{border:2px solid var(--line); border-radius:16px; padding:20px 22px}
+#camp-page .contact .role{font-size:14px; color:var(--muted); margin-bottom:8px}
+#camp-page .contact a{display:block; font-weight:700; text-decoration:none; margin-top:2px}
+#camp-page .contact a:hover{text-decoration:underline}
+#camp-page .final{background:var(--navy); color:#fff; text-align:center; border-radius:28px; margin-bottom:24px}
+#camp-page .final h2{color:#fff}
+#camp-page .final p{opacity:.9}
+
+@media (max-width:860px){
+  #camp-page .facts{grid-template-columns:1fr 1fr}
+  #camp-page .fact:nth-child(2){border-right:0}
+  #camp-page .fact:nth-child(-n+2){border-bottom:2px dashed var(--line)}
+  #camp-page .acts{grid-template-columns:1fr 1fr}
+  #camp-page .steps,#camp-page .fees,#camp-page .fine{grid-template-columns:1fr}
+  #camp-page .steps{gap:28px}
+  #camp-page .raffle{grid-template-columns:1fr; text-align:center}
+  #camp-page .raffle .tix{margin:0 auto}
+}
+@media (max-width:560px){
+  #camp-page{font-size:16px}
+  #camp-page section{padding:44px 16px}
+  #camp-page .facts-wrap{padding:0 16px}
+  #camp-page .facts{grid-template-columns:1fr}
+  #camp-page .fact{border-right:0; border-bottom:2px dashed var(--line)}
+  #camp-page .fact:last-child{border-bottom:0}
+  #camp-page .save,#camp-page .contacts{grid-template-columns:1fr}
+  #camp-page .venue{flex-direction:column; align-items:flex-start}
+  #camp-page .rf-banner{padding:0 16px}
+  #camp-page .rf-banner a{flex-wrap:wrap}
+  #camp-page .rf-banner .txt{flex-basis:calc(100% - 60px)}
+  #camp-page .rf-banner .go{margin-left:54px}
+  #camp-page .btn{font-size:17px; padding:14px 24px}
+  #camp-page .vid-arrow{width:42px; height:42px; top:auto; bottom:-62px; margin:0}
+  #camp-page .vid-arrow.prev{left:0} #camp-page .vid-arrow.next{right:0}
+}
+</style>
+
+<div id="camp-page">
+
+  <!-- HERO -->
+  <header class="hero">
+    <img class="hero-logo" src="https://photos.smugmug.com/Youth/Thumbnails/2026-Big-Summer-News-Blast/i-C4vrRhH/0/LP2dCTjLMNb2nZJV9PMqjq4wqNxcRfFDv7j47XkDs/X2/2027%20All%20Aboard%20-%20Simplified%20SPJST%20Wordmark%202-X2.png" alt="All Aboard 2027 SPJST Summer Camp logo">
+    <h1><span>SPJST Summer Youth Camp</span>All Aboard for 2027!</h1>
+    <p class="tag">Five days of friends, fresh air and adventure at a brand-new home: Peaceable Kingdom Retreat in Bell County.</p>
+    <div class="hero-ctas">
+      <!-- REGISTER_URL -->
+      <a class="btn btn-sun" href="https://pci.jotform.com/form/262935732024153" target="_blank" rel="noopener">Register for Camp
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="btn btn-ghost" href="#camp-fees">See Camp Fees</a>
+    </div>
+    <div class="rails" aria-hidden="true"></div>
+  </header>
+
+  <!-- QUICK FACTS -->
+  <div class="facts-wrap">
+    <div class="facts">
+      <div class="fact"><div class="k">When</div><div class="v">June 23–27, 2027</div><div class="s">Wednesday through Sunday</div></div>
+      <div class="fact"><div class="k">Where</div><div class="v">Peaceable Kingdom</div><div class="s">Salado, Texas</div></div>
+
+      <div class="fact"><div class="k">Who</div><div class="v">Grades K–12</div><div class="s">Completed kindergarten through incoming high school seniors</div></div>
+      <div class="fact"><div class="k">Cost</div><div class="v">As low as $25</div><div class="s">For active SPJST youth members</div></div>
+    </div>
+  </div>
+
+  <!-- RAFFLE BANNER: hides itself after data-until -->
+  <div class="rf-banner" id="camp-rf-banner" data-until="2026-12-31">
+    <a href="camp-raffle/">
+      <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linejoin="round" aria-hidden="true"><path d="M8 18h48v8a6 6 0 0 0 0 12v8H8v-8a6 6 0 0 0 0-12z" fill="#fff"/><path d="M40 18v28" stroke-dasharray="3 4"/></svg>
+      <span class="txt"><strong>Help fill the Summer Camp Raffle prize pool!</strong>Prize and cash donations are due December 31.</span>
+      <span class="go">Learn More &rarr;</span>
+    </a>
+  </div>
+
+  <!-- ABOUT + ACTIVITIES -->
+  <section>
+    <div class="wrap center">
+      <span class="eyebrow">Welcome Aboard</span>
+      <h2>A Summer They'll Never Forget</h2>
+      <p class="lede">SPJST Summer Youth Camp is a traditional sleep-away camp where kids from across Texas make new friends, try new things and build memories that last a lifetime. This year we're heading somewhere new!</p>
+
+      <div class="acts">
+        <div class="act"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 16c2 0 2-1.5 4-1.5S8 16 10 16s2-1.5 4-1.5 2 1.5 4 1.5 2-1.5 4-1.5"/><path d="M2 20c2 0 2-1.5 4-1.5S8 20 10 20s2-1.5 4-1.5 2 1.5 4 1.5 2-1.5 4-1.5"/><circle cx="15" cy="6" r="2"/><path d="M6 12l4-4 3 2 3-1"/></svg></div><h3>Swimming</h3><p>Pool time and pool parties</p></div>
+        <div class="act"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4l20 6"/><path d="M12 7v5"/><circle cx="12" cy="14" r="2"/><path d="M12 16v4M9 22l3-2 3 2"/></svg></div><h3>Zip Line</h3><p>Fly through the trees</p></div>
+        <div class="act"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V5M21 21V5M3 8h18M3 8l4 5 5-5 5 5 4-5"/></svg></div><h3>Ropes Course</h3><p>Challenge and teamwork</p></div>
+        <div class="act"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/></svg></div><h3>Archery</h3><p>Aim for the bullseye</p></div>
+        <div class="act"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 1 0 0 18c1.5 0 2-1 2-2 0-1.5-1-2-1-3s1-2 2.5-2H18a3 3 0 0 0 3-3c0-4.5-4-8-9-8z"/><circle cx="7.5" cy="10.5" r="1" fill="currentColor"/><circle cx="11" cy="7" r="1" fill="currentColor"/><circle cx="15.5" cy="8" r="1" fill="currentColor"/></svg></div><h3>Arts &amp; Crafts</h3><p>Create something to take home</p></div>
+        <div class="act"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18M5.6 5.6c3.5 3.5 3.5 9.3 0 12.8M18.4 5.6c-3.5 3.5-3.5 9.3 0 12.8"/></svg></div><h3>Sports &amp; Games</h3><p>Teamwork and good sportsmanship</p></div>
+        <div class="act"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c2 3 4 4.5 4 8a4 4 0 0 1-8 0c0-2 1-3 1.5-4 .5 1.5 1.5 2 2.5 2 0-2-1-4 0-6z"/><path d="M4 21l16-4M4 17l16 4"/></svg></div><h3>Evening Fun</h3><p>Campfires, songs, s'mores and game nights</p></div>
+        <div class="act"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.5-7 10-7 10z"/></svg></div><h3>Czech Heritage</h3><p>Celebrating SPJST and Czech history</p></div>
+      </div>
+      <p class="note">Activities may vary and are subject to change.</p>
+
+      <div class="venue" style="text-align:left">
+        <div class="pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg></div>
+        <p><strong>Our new home: Peaceable Kingdom Retreat of Bell County.</strong> This state-licensed youth camp sits on 115 acres in Bell County and was built so campers of all abilities can enjoy every part of camp. Detailed directions and check-in times will be sent to parents and guardians before camp. <a href="https://pkrbc.org/" target="_blank" rel="noopener">Learn about the camp</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW TO REGISTER -->
+  <section class="bg-sky">
+    <div class="wrap center">
+      <span class="eyebrow">Grab Your Ticket</span>
+      <h2>How to Register</h2>
+      <p class="lede">Space is limited, so register as soon as you can.</p>
+      <ol class="steps" style="text-align:left">
+        <li><h3>Register online</h3><p>Fill out the 2027 registration form and pay the non-refundable registration fee.</p></li>
+        <li><h3>Watch your inbox</h3><p>The Home Office will email you an invoice for the remaining balance.</p></li>
+        <li><h3>Pay by June 1, 2027</h3><p>Final payment is due June 1. Any credits you've earned come off your balance.</p></li>
+      </ol>
+      <a class="btn btn-sun" href="https://pci.jotform.com/form/262935732024153" target="_blank" rel="noopener">Register for Camp
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+  </section>
+
+  <!-- FEES -->
+  <section id="camp-fees">
+    <div class="wrap">
+      <div class="center">
+        <span class="eyebrow">Fares</span>
+        <h2>Camp Fees</h2>
+      </div>
+      <div class="fees">
+        <div class="fee">
+          <div class="who">Non-Member</div>
+          <div class="price">$875</div>
+          <div class="desc">For campers who are not SPJST members.</div>
+          <dl><div><dt>Registration fee</dt><dd>$50</dd></div><div><dt>Balance due June 1</dt><dd>$825</dd></div></dl>
+        </div>
+        <div class="fee">
+          <div class="who">Non-Active Youth Member</div>
+          <div class="price">$775</div>
+          <div class="desc">Has an SPJST certificate but is not active in a youth club.</div>
+          <dl><div><dt>Registration fee</dt><dd>$50</dd></div><div><dt>Balance due June 1</dt><dd>$725</dd></div></dl>
+        </div>
+        <div class="fee best">
+          <span class="flag">Best Fare</span>
+          <div class="who">Active Youth Member</div>
+          <div class="price"><small>AS LOW AS</small> $25</div>
+          <div class="desc">Actively participates in an SPJST youth club.</div>
+          <dl><div><dt>Registration fee</dt><dd>$25</dd></div><div><dt>Balance due June 1</dt><dd>$225</dd></div></dl>
+        </div>
+      </div>
+
+      <div class="save">
+        <div class="save-card">
+          <h3>Youth Activity Credits</h3>
+          <p>Earn <strong>$75 per activity</strong>, up to 7 credits ($525). Credits come off your balance, and the Home Office invoices anything left over.</p>
+        </div>
+        <div class="save-card alt">
+          <h3>Raffle Ticket Credits</h3>
+          <p>Every Summer Camp Raffle ticket a camper sells takes <strong>$10</strong> off their camp fee. Sell 25 tickets and that's $250!</p>
+          <p><a href="camp-raffle/">About the Summer Camp Raffle &rarr;</a></p>
+        </div>
+      </div>
+
+      <div class="fine">
+        <div><strong>Registration fees</strong>Registration fees are non-refundable and can't be reduced by credits.</div>
+        <div><strong>Refund policy</strong>Camp fees, except the registration fee, are refundable until June 1, 2027. No refunds after June 1.</div>
+        <div><strong>Missing your invoice?</strong>Contact Tammy at the Home Office: <a href="mailto:tammym@spjst.com">tammym@spjst.com</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAMPER REQUIREMENTS -->
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="req">
+        <h3>Camper Requirements</h3>
+        <p>SPJST Summer Youth Camp is a traditional sleep-away camp. Campers must be able to move about camp freely, eat in the camp dining facilities and take part in group activities. Medical staff are on site, but camp is not equipped for specialized medical needs.</p>
+        <p>Questions about whether camp is a good fit for your child? Call Director of Member Engagement Frank Horak at <a href="tel:2545340681">254-534-0681</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- RAFFLE TEASER -->
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="raffle">
+        <svg class="tix" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" aria-hidden="true"><path d="M8 18h48v8a6 6 0 0 0 0 12v8H8v-8a6 6 0 0 0 0-12z" fill="#fff"/><path d="M40 18v28" stroke-dasharray="3 4"/><path d="M18 28h14M18 36h10" stroke-linecap="round"/></svg>
+        <div>
+          <h2>Summer Camp Raffle</h2>
+          <p>Help send SPJST youth to camp! We're collecting prizes for the raffle now. <strong>Donations are due December 31.</strong></p>
+        </div>
+        <a class="btn" href="camp-raffle/">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIDEO -->
+  <section class="bg-sky">
+    <div class="wrap center">
+      <span class="eyebrow">See You at Camp</span>
+      <h2>Camp Recap Videos</h2>
+      <p class="lede">Get a glimpse of the fun from past SPJST Summer Youth Camps.</p>
+      <!-- VIDEO EMBEDS: one .slide per video, newest first. Put the SmugMug embed URL in data-src. -->
+      <div class="vids" id="camp-vids">
+        <div class="vid-stage">
+          <button class="vid-arrow prev" type="button" aria-label="Previous video"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button>
+          <div class="video">
+            <div class="slide" data-year="2026" data-src="https://api.smugmug.com/services/embed/18794647460_8bN6vjr?width=1280&height=720&albumId=496825358&albumKey=gcVmBf"></div>
+            <div class="slide" data-year="2025" data-src="https://api.smugmug.com/services/embed/17104434725_X6JRCJL?width=800&height=450&albumId=447478933&albumKey=7CTXn8"></div>
+          </div>
+          <button class="vid-arrow next" type="button" aria-label="Next video"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></button>
+        </div>
+        <div class="vid-tabs" role="tablist"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section>
+    <div class="wrap">
+      <div class="center"><span class="eyebrow">Questions?</span><h2>We're Here to Help</h2></div>
+      <div class="contacts">
+        <div class="contact">
+          <h3>Frank Horak</h3>
+          <div class="role">Director of Member Engagement</div>
+          <a href="tel:2545340681">254-534-0681</a>
+          <a href="mailto:frankh@spjst.com">frankh@spjst.com</a>
+        </div>
+        <div class="contact">
+          <h3>Communications &amp; Fraternal</h3>
+          <div class="role">SPJST Home Office</div>
+          <a href="tel:2547731575,177">254-773-1575 ext. 177</a>
+          <a href="mailto:info@spjst.org">info@spjst.org</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="final">
+    <div class="wrap">
+      <h2>Ready to Ride?</h2>
+      <p>Save your camper's seat for June 23–27, 2027.</p>
+      <a class="btn btn-sun" href="https://pci.jotform.com/form/262935732024153" target="_blank" rel="noopener">Register for Camp
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+  </section>
+
+</div>
+
+<script>
+(function(){
+  var bn = document.getElementById("camp-rf-banner");
+  if (bn && new Date() > new Date(bn.getAttribute("data-until") + "T23:59:59")) bn.style.display = "none";
+})();
+(function(){
+  var box = document.getElementById("camp-vids");
+  if (!box) return;
+  var slides = box.querySelectorAll(".slide"), tabs = box.querySelector(".vid-tabs"), cur = -1;
+  function show(i){
+    i = (i + slides.length) % slides.length;
+    if (i === cur) return;
+    if (cur > -1) { slides[cur].classList.remove("on"); slides[cur].innerHTML = ""; } /* stops the old video */
+    var s = slides[i], f = document.createElement("iframe");
+    f.src = s.getAttribute("data-src");
+    f.title = s.getAttribute("data-year") + " SPJST Summer Camp recap video";
+    f.setAttribute("allow", "fullscreen"); f.setAttribute("allowfullscreen", "true"); f.setAttribute("scrolling", "no");
+    s.appendChild(f); s.classList.add("on");
+    tabs.querySelectorAll("button").forEach(function(b, j){ b.setAttribute("aria-selected", j === i ? "true" : "false"); });
+    cur = i;
+  }
+  slides.forEach(function(s, i){
+    var b = document.createElement("button");
+    b.type = "button"; b.setAttribute("role", "tab"); b.textContent = s.getAttribute("data-year");
+    b.addEventListener("click", function(){ show(i); });
+    tabs.appendChild(b);
+  });
+  box.querySelector(".prev").addEventListener("click", function(){ show(cur - 1); });
+  box.querySelector(".next").addEventListener("click", function(){ show(cur + 1); });
+  /* load the first video only when it scrolls near the screen */
+  if ("IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function(e){ if (e[0].isIntersecting) { io.disconnect(); if (cur < 0) show(0); } }, {rootMargin:"300px"});
+    io.observe(box);
+  } else { show(0); }
+  tabs.querySelector("button").setAttribute("aria-selected", "true");
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>SPJST Summer Camp Raffle — Draft</title>
+<style>body{margin:0;background:#fff}</style>
+</head>
+<body>
+<div style="background:#FFF6D6;border-bottom:1px solid #E8D58A;color:#4A3B00;font:600 14px/1.4 system-ui,sans-serif;text-align:center;padding:10px 16px">Draft preview for review &mdash; not the live SPJST website. <span style="display:inline-block;margin-left:14px">Page 2 of 2: <strong>Camp Raffle</strong> &middot; <a href="../" style="color:#24367C">Back to the Summer Camp page</a></span></div>
+<!-- ============================================================
+     SPJST SUMMER CAMP RAFFLE — paste into a WordPress Custom HTML block
+     Suggested page: spjst.org/camp-raffle/
+     Quick edits are all in RAFFLE_SETTINGS in the <script> at the bottom:
+       • phase: "prizes"  → collecting prizes, tickets "coming soon"   (now)
+                "tickets" → ticket sales open (set when sales start)
+                "drawn"   → raffle over, thank-you message
+       • prizeDeadline: donations card auto-closes after this date
+       • ticketsOpen / drawingDate: text shown on the timeline
+       • ticketUrl: link for buying tickets (leave "" to show contact info only)
+     ============================================================ -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Nunito+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+
+<style>
+#raffle-page{
+  --navy:#24367C; --blue:#0757A0; --sky:#E8F1FA; --teal:#17999A; --teal-dk:#0F7C7D;
+  --sun:#FFC72C; --cream:#FFF8E1; --ink:#1B2240; --muted:#55607E; --line:#D5DFEC;
+  font-family:'Nunito Sans',system-ui,sans-serif; color:var(--ink); font-size:17px; line-height:1.6;
+  max-width:1100px; margin:0 auto; -webkit-font-smoothing:antialiased;
+}
+#raffle-page *,#raffle-page *::before,#raffle-page *::after{box-sizing:border-box}
+#raffle-page h1,#raffle-page h2,#raffle-page h3{font-family:'Oswald',sans-serif; color:var(--navy); line-height:1.15; margin:0 0 .5em; letter-spacing:.01em; border:0; padding:0}
+#raffle-page h2{font-size:clamp(28px,4vw,38px); text-transform:uppercase}
+#raffle-page h3{font-size:22px}
+#raffle-page p{margin:0 0 1em}
+#raffle-page a{color:var(--blue)}
+#raffle-page section{padding:56px 24px}
+#raffle-page .wrap{max-width:960px; margin:0 auto}
+#raffle-page .center{text-align:center}
+#raffle-page .eyebrow{display:inline-block; font-family:'Oswald',sans-serif; font-weight:600; font-size:14px; letter-spacing:.14em; text-transform:uppercase; color:var(--teal-dk); margin-bottom:8px}
+#raffle-page .lede{font-size:19px; color:var(--muted); max-width:720px; margin:0 auto 1.4em}
+#raffle-page [hidden]{display:none !important}
+
+#raffle-page .btn{display:inline-flex; align-items:center; gap:10px; font-family:'Oswald',sans-serif; font-weight:600; font-size:18px; letter-spacing:.06em; text-transform:uppercase; text-decoration:none; padding:14px 28px; border-radius:999px; transition:transform .15s, background .15s; line-height:1.2; border:0}
+#raffle-page .btn:hover{transform:translateY(-2px)}
+#raffle-page .btn-navy{background:var(--navy); color:#fff} #raffle-page .btn-navy:hover{background:var(--blue); color:#fff}
+#raffle-page .btn-sun{background:var(--sun); color:var(--navy)} #raffle-page .btn-sun:hover{color:var(--navy)}
+
+/* hero */
+#raffle-page .hero{position:relative; overflow:hidden; text-align:center; padding:48px 24px 72px; border-radius:0 0 28px 28px; color:#fff;
+  background:
+    repeating-conic-gradient(from 270deg at 50% 100%, rgba(255,255,255,.06) 0deg 6deg, transparent 6deg 12deg),
+    radial-gradient(ellipse at 50% 100%, #1167B8 0%, var(--blue) 35%, var(--navy) 80%)}
+#raffle-page .hero-logo{width:130px; height:auto; display:block; margin:0 auto 16px; filter:drop-shadow(0 8px 18px rgba(0,0,0,.3))}
+#raffle-page .hero .kicker{font-family:'Oswald',sans-serif; font-weight:600; letter-spacing:.14em; text-transform:uppercase; font-size:clamp(22px,3.4vw,32px); color:#fff; line-height:1.1}
+#raffle-page .hero h1{font-size:clamp(52px,9vw,96px); text-transform:uppercase; margin:0 0 16px; color:var(--sun); line-height:1; letter-spacing:.04em}
+#raffle-page .hero p{font-size:clamp(18px,2.2vw,21px); line-height:1.55; max-width:640px; margin:0 auto; color:#fff}
+#raffle-page .hero strong{color:var(--sun)}
+
+/* timeline / departure board */
+#raffle-page .board{display:grid; grid-template-columns:repeat(3,1fr); background:var(--navy); color:#fff; border-radius:18px; margin:-36px 24px 0; position:relative; z-index:2; box-shadow:0 12px 30px rgba(36,54,124,.25); overflow:hidden; border:4px solid #fff}
+#raffle-page .stop{padding:20px 22px; border-right:2px dashed rgba(255,255,255,.25); opacity:.6}
+#raffle-page .stop:last-child{border-right:0}
+#raffle-page .stop.now{opacity:1; background:rgba(255,255,255,.07)}
+#raffle-page .stop .st{font-family:'Oswald',sans-serif; font-size:13px; letter-spacing:.16em; text-transform:uppercase; color:var(--sun); display:flex; align-items:center; gap:8px}
+#raffle-page .stop.now .st::before{content:""; width:9px; height:9px; border-radius:50%; background:#5CE08A; box-shadow:0 0 0 4px rgba(92,224,138,.25)}
+#raffle-page .stop.done .st{color:#B7C3D6}
+#raffle-page .stop .t{font-family:'Oswald',sans-serif; font-size:22px; font-weight:600; margin:4px 0 0; line-height:1.2}
+#raffle-page .stop .d{font-size:15px; opacity:.85}
+
+/* two ticket cards */
+#raffle-page .paths{display:grid; grid-template-columns:1fr 1fr; gap:22px; margin-top:30px; text-align:left}
+#raffle-page .ticket{position:relative; background:#fff; border:2px solid var(--line); border-radius:18px; padding:28px 26px 24px; display:flex; flex-direction:column}
+#raffle-page .ticket::before,#raffle-page .ticket::after{content:""; position:absolute; top:50%; width:26px; height:26px; margin-top:-13px; border-radius:50%; background:#fff; border:2px solid var(--line)}
+#raffle-page .ticket::before{left:-14px; clip-path:inset(0 0 0 50%)}
+#raffle-page .ticket::after{right:-14px; clip-path:inset(0 50% 0 0)}
+#raffle-page .ticket.open{border-color:var(--teal); box-shadow:0 12px 28px rgba(23,153,154,.18)}
+#raffle-page .ticket.open::before,#raffle-page .ticket.open::after{border-color:var(--teal)}
+#raffle-page .ticket.closed{background:#F6F8FB}
+#raffle-page .ticket.closed h3,#raffle-page .ticket.closed .lead{color:var(--muted)}
+#raffle-page .pill{align-self:flex-start; font-family:'Oswald',sans-serif; font-size:13px; letter-spacing:.14em; text-transform:uppercase; padding:4px 12px; border-radius:999px; margin-bottom:12px}
+#raffle-page .pill.on{background:var(--teal); color:#fff}
+#raffle-page .pill.off{background:var(--line); color:var(--muted)}
+#raffle-page .ticket .lead{font-size:16px; color:var(--ink)}
+#raffle-page .ticket ul{margin:0 0 16px; padding:0; list-style:none}
+#raffle-page .ticket li{position:relative; padding-left:26px; margin:6px 0; font-size:15px}
+#raffle-page .ticket li::before{content:""; position:absolute; left:4px; top:7px; width:12px; height:8px; border:solid var(--teal); border-width:0 0 3px 3px; transform:rotate(-45deg)}
+#raffle-page .ticket.closed li::before{border-color:#AAB5C6}
+#raffle-page .ticket .foot{margin-top:auto; padding-top:16px; border-top:2px dashed var(--line)}
+#raffle-page .ticket .foot p{font-size:15px; margin:0 0 10px}
+
+/* looking for */
+#raffle-page .bg-sky{background:var(--sky); border-radius:28px}
+#raffle-page .want{display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:26px}
+#raffle-page .want > div{background:#fff; border-radius:16px; padding:22px 20px; text-align:center}
+#raffle-page .want .ic{width:60px; height:60px; margin:0 auto 12px; padding:0; border-radius:50%; background:var(--cream); color:var(--navy); display:flex; align-items:center; justify-content:center}
+#raffle-page .want .ic svg{width:30px; height:30px; display:block}
+#raffle-page .want h3{font-size:19px; margin-bottom:4px}
+#raffle-page .want p{font-size:15px; color:var(--muted); margin:0}
+#raffle-page .deadline{display:inline-block; margin-top:28px; background:var(--navy); color:#fff; border-radius:14px; padding:14px 26px; font-family:'Oswald',sans-serif; letter-spacing:.06em; text-transform:uppercase}
+#raffle-page .deadline b{display:block; color:var(--sun); font-size:34px; line-height:1.1}
+
+/* how to give */
+#raffle-page .give{display:grid; grid-template-columns:1fr 1fr; gap:22px; margin-top:24px}
+#raffle-page .give .box{border:2px solid var(--line); border-radius:16px; padding:22px 24px}
+#raffle-page .give .box a{font-weight:700; text-decoration:none; display:block}
+#raffle-page .give .box a:hover{text-decoration:underline}
+#raffle-page .give address{font-style:normal; margin-bottom:8px}
+
+/* campers */
+/* campers: a ticket with a navy stub */
+#raffle-page .campers{position:relative; display:grid; grid-template-columns:200px 1fr; background:#fff; border:2px solid var(--line); border-radius:20px; overflow:hidden; box-shadow:0 12px 28px rgba(36,54,124,.12)}
+#raffle-page .campers .big{background:var(--navy); color:#fff; font-family:'Oswald',sans-serif; text-align:center; display:flex; flex-direction:column; justify-content:center; align-items:center; padding:28px 16px; border-right:3px dashed #fff; position:relative}
+#raffle-page .campers .big .stub-k{font-size:13px; letter-spacing:.18em; text-transform:uppercase; color:#B7C3D6; margin-bottom:8px}
+#raffle-page .campers .big b{display:block; font-size:68px; font-weight:700; line-height:.95; color:#fff}
+#raffle-page .campers .big span.unit{display:block; margin-top:10px; font-size:15px; letter-spacing:.14em; text-transform:uppercase; color:var(--sun); line-height:1.3}
+#raffle-page .campers .body{padding:28px 32px}
+#raffle-page .campers h2{font-size:clamp(24px,3.4vw,32px); margin-bottom:8px}
+#raffle-page .campers p{margin:0 0 .7em}
+#raffle-page .campers .ex{display:inline-block; background:var(--sky); border-radius:10px; padding:8px 14px; font-size:15px; margin-bottom:12px}
+#raffle-page .campers .ex b{color:var(--teal-dk)}
+#raffle-page .campers a{font-weight:700}
+
+#raffle-page .back{text-align:center; padding-bottom:40px}
+
+@media (max-width:820px){
+  #raffle-page .paths,#raffle-page .give{grid-template-columns:1fr}
+  #raffle-page .want{grid-template-columns:1fr}
+  #raffle-page .board{grid-template-columns:1fr}
+  #raffle-page .stop{border-right:0; border-bottom:2px dashed rgba(255,255,255,.25)}
+  #raffle-page .stop:last-child{border-bottom:0}
+  #raffle-page .campers{grid-template-columns:1fr; text-align:center}
+  #raffle-page .campers .big{border-right:0; border-bottom:3px dashed #fff}
+  #raffle-page .campers .body{padding:24px 20px}
+}
+@media (max-width:560px){
+  #raffle-page{font-size:16px}
+  #raffle-page section{padding:44px 16px}
+  #raffle-page .board{margin:-30px 16px 0}
+  #raffle-page .ticket{padding:24px 20px 20px}
+}
+</style>
+
+<div id="raffle-page">
+
+  <header class="hero">
+    <img class="hero-logo" src="https://photos.smugmug.com/Youth/Thumbnails/2026-Big-Summer-News-Blast/i-C4vrRhH/0/LP2dCTjLMNb2nZJV9PMqjq4wqNxcRfFDv7j47XkDs/X2/2027%20All%20Aboard%20-%20Simplified%20SPJST%20Wordmark%202-X2.png" alt="All Aboard 2027 SPJST Summer Camp logo">
+    <div class="kicker">SPJST Summer Camp</div>
+    <h1>Raffle</h1>
+    <p>Every raffle ticket helps send <strong>SPJST youth</strong> to camp, where they'll make friends, memories and lifelong smiles under the Texas stars.</p>
+  </header>
+
+  <div class="board" aria-label="Raffle timeline">
+    <div class="stop" data-stop="prizes"><div class="st">Stop 1</div><div class="t">Prize Donations</div><div class="d">Now through December 31</div></div>
+    <div class="stop" data-stop="tickets"><div class="st">Stop 2</div><div class="t">Ticket Sales</div><div class="d" data-text="ticketsOpen">Coming in 2027</div></div>
+    <div class="stop" data-stop="drawn"><div class="st">Stop 3</div><div class="t">Prize Drawing</div><div class="d" data-text="drawingDate">Date to be announced</div></div>
+  </div>
+
+  <!-- TWO WAYS TO HELP -->
+  <section>
+    <div class="wrap center">
+      <span class="eyebrow">Two Ways to Help</span>
+      <h2>Give a Prize or Buy a Ticket</h2>
+      <p class="lede">Right now we're building the prize lineup. Ticket sales start next year.</p>
+
+      <div class="paths">
+        <!-- DONATE A PRIZE -->
+        <div class="ticket" id="rf-prize">
+          <span class="pill"></span>
+          <h3>Donate a Prize</h3>
+          <p class="lead">Lodges, youth clubs, members and friends of SPJST: help us build an amazing prize lineup.</p>
+          <ul>
+            <li>Gift cards or prizes valued at $75 or more</li>
+            <li>Nonperishable and not tied to one location</li>
+            <li>Cash donations are welcome too</li>
+          </ul>
+          <div class="foot">
+            <p data-when="open"><strong>Deadline: December 31.</strong> See below for how to send your donation.</p>
+            <p data-when="closed">Prize donations are closed. Thank you to everyone who gave!</p>
+            <a class="btn btn-navy" href="#rf-give" data-when="open">How to Donate</a>
+          </div>
+        </div>
+
+        <!-- BUY TICKETS -->
+        <div class="ticket" id="rf-tickets">
+          <span class="pill"></span>
+          <h3>Buy Raffle Tickets</h3>
+          <p class="lead">Tickets are <strong>$10 each</strong>. Every ticket sold goes toward camper fees.</p>
+          <ul>
+            <li>Support SPJST youth programs</li>
+            <li>Help families cover the cost of camp</li>
+            <li>A chance to win a great prize</li>
+          </ul>
+          <div class="foot">
+            <p data-when="soon">Ticket sales open in 2027. Check back here for details.</p>
+            <p data-when="open">To buy tickets, contact Frank Horak at <a href="tel:2545340681">254-534-0681</a> or the Home Office at <a href="tel:2547731575,177">254-773-1575 ext. 177</a>.</p>
+            <a class="btn btn-sun" id="rf-ticket-btn" href="#" target="_blank" rel="noopener" data-when="open" hidden>Buy Tickets</a>
+            <p data-when="closed">Ticket sales have ended. Thank you for supporting our campers!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT WE'RE LOOKING FOR -->
+  <section class="bg-sky" data-show="prizes">
+    <div class="wrap center">
+      <span class="eyebrow">We Need Your Help</span>
+      <h2>Prizes We're Looking For</h2>
+      <p class="lede">The prizes we collect decide how many prizes we offer and how valuable they are. The more we collect, the more tickets we can sell for our campers.</p>
+      <div class="want">
+        <div><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18M7 15h4"/></svg></div><h3>Gift Cards</h3><p>Valued at $75 or more, usable anywhere (not tied to one location)</p></div>
+        <div><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="9" width="18" height="12" rx="1.5"/><path d="M12 9v12M3 13h18M12 9C10 5 6 5 7 8s5 1 5 1 4 2 5-1-3-3-5 1"/></svg></div><h3>Prizes</h3><p>Valued at $75 or more and nonperishable</p></div>
+        <div><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M15 9.5c-.5-1-1.6-1.5-3-1.5-1.7 0-3 .9-3 2s1 1.7 3 2 3 .9 3 2-1.3 2-3 2c-1.4 0-2.5-.5-3-1.5M12 6.5v11"/></svg></div><h3>Cash Donations</h3><p>Any amount helps grow the prize pool</p></div>
+      </div>
+      <div class="deadline">Donation Deadline<b>December 31</b></div>
+    </div>
+  </section>
+
+  <!-- HOW TO GIVE -->
+  <section id="rf-give" data-show="prizes">
+    <div class="wrap">
+      <div class="center"><span class="eyebrow">How to Donate</span><h2>Send or Drop Off Your Prize</h2>
+        <p class="lede">Send or drop off donations at the SPJST Home Office, or give them to your District Director. Lodges are encouraged to give as part of their community service and support of our youth.</p></div>
+      <div class="give">
+        <div class="box">
+          <h3>SPJST Home Office</h3>
+          <address>520 N. Main St.<br>Temple, TX 76501</address>
+          <p style="margin:0;font-size:15px;color:var(--muted)">Attn: Communications/Fraternal Team, Summer Camp Raffle</p>
+        </div>
+        <div class="box">
+          <h3>Questions?</h3>
+          <p style="margin-bottom:6px">Contact the Communications/Fraternal Team or your District Director.</p>
+          <a href="mailto:info@spjst.org">info@spjst.org</a>
+          <a href="tel:2547731575,177">254-773-1575 ext. 177</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAMPERS -->
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="campers">
+        <div class="big"><span class="stub-k">Camper Credit</span><b>$10</b><span class="unit">off camp<br>per ticket sold</span></div>
+        <div class="body">
+          <span class="eyebrow">For Campers</span>
+          <h2>Sell Tickets, Save on Camp</h2>
+          <p>Every raffle ticket a camper sells takes $10 off their camp fee.</p>
+          <div class="ex">Sell <b>25 tickets</b> = <b>$250 off</b> camp!</div>
+          <p style="font-size:15px;color:var(--muted)">Registration fees can't be reduced.</p>
+          <p style="margin:0"><a href="../#camp-fees">See all camp fees and credits &rarr;</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="back"><a class="btn btn-navy" href="../">&larr; Back to Summer Camp</a></div>
+</div>
+
+<script>
+(function(){
+  /* ===== RAFFLE_SETTINGS: edit these ===== */
+  var RAFFLE_SETTINGS = {
+    phase: "prizes",                 // "prizes" | "tickets" | "drawn"
+    prizeDeadline: "2026-12-31",     // prize card closes automatically after this date
+    ticketsOpen: "Coming in 2027",   // text under Stop 2, e.g. "March 1 – May 31, 2027"
+    drawingDate: "Date to be announced", // text under Stop 3, e.g. "June 26, 2027 at camp"
+    ticketUrl: ""                    // online ticket link, or "" for phone/contact only
+  };
+  /* ======================================= */
+
+  var root = document.getElementById("raffle-page");
+  if (!root) return;
+  var S = RAFFLE_SETTINGS;
+  var end = new Date(S.prizeDeadline + "T23:59:59");
+  var prizesOpen = S.phase === "prizes" && new Date() <= end;
+  var ticketState = S.phase === "tickets" ? "open" : (S.phase === "drawn" ? "closed" : "soon");
+  var current = S.phase === "prizes" && !prizesOpen ? "tickets" : S.phase;
+
+  root.querySelectorAll("[data-text]").forEach(function(el){ el.textContent = S[el.getAttribute("data-text")]; });
+
+  var order = ["prizes","tickets","drawn"];
+  root.querySelectorAll(".stop").forEach(function(el){
+    var i = order.indexOf(el.getAttribute("data-stop")), c = order.indexOf(current);
+    if (i < c) { el.classList.add("done"); el.querySelector(".st").textContent = "Complete"; }
+    if (i === c) { el.classList.add("now"); el.querySelector(".st").textContent = current === "tickets" && ticketState === "soon" ? "Up Next" : "Now Boarding"; }
+  });
+
+  function setCard(card, state, label){
+    card.classList.add(state === "open" ? "open" : "closed");
+    var pill = card.querySelector(".pill");
+    pill.textContent = label;
+    pill.className = "pill " + (state === "open" ? "on" : "off");
+    card.querySelectorAll("[data-when]").forEach(function(el){ el.hidden = el.getAttribute("data-when") !== state; });
+  }
+  setCard(document.getElementById("rf-prize"), prizesOpen ? "open" : "closed", prizesOpen ? "Open Now" : "Closed");
+  setCard(document.getElementById("rf-tickets"), ticketState,
+          ticketState === "open" ? "On Sale Now" : ticketState === "soon" ? "Coming Soon" : "Sales Ended");
+
+  var tb = document.getElementById("rf-ticket-btn");
+  if (ticketState === "open" && S.ticketUrl) { tb.href = S.ticketUrl; tb.hidden = false; } else { tb.hidden = true; }
+
+  root.querySelectorAll("[data-show='prizes']").forEach(function(el){ el.hidden = !prizesOpen; });
+})();
+</script>
+
+</body>
+</html>
